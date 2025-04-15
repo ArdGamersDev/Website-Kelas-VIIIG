@@ -171,10 +171,10 @@ body {
   border: 5px solid #00ccff;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 23px;
   flex: 1; /* Membuat kotak memiliki ukuran fleksibel */
   text-align: center;
-  width: 30%; /* Ukuran default untuk layar besar */
+  width: 25%; /* Ukuran default untuk layar besar */
   margin: 0 10px; /* Jarak antar kotak untuk fleksibilitas */
 }
 
@@ -183,10 +183,10 @@ body {
   border: 5px solid #f700ff;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  padding: 23px;
   flex: 1; /* Membuat kotak memiliki ukuran fleksibel */
   text-align: center;
-  width: 30%; /* Ukuran default untuk layar besar */
+  width: 25%; /* Ukuran default untuk layar besar */
   margin: 0 10px; /* Jarak antar kotak untuk fleksibilitas */
 }
 
