@@ -174,7 +174,7 @@ body {
   padding: 20px;
   flex: 1; /* Membuat kotak memiliki ukuran fleksibel */
   text-align: center;
-  width: 20%; /* Ukuran default untuk layar besar */
+  width: 40%; /* Ukuran default untuk layar besar */
   margin: 0 10px; /* Jarak antar kotak untuk fleksibilitas */
 }
 
@@ -186,7 +186,7 @@ body {
   padding: 20px;
   flex: 1; /* Membuat kotak memiliki ukuran fleksibel */
   text-align: center;
-  width: 20%; /* Ukuran default untuk layar besar */
+  width: 40%; /* Ukuran default untuk layar besar */
   margin: 0 10px; /* Jarak antar kotak untuk fleksibilitas */
 }
 
