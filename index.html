@@ -193,49 +193,82 @@
         </div>
       </div>
     </div>
-    <section
-      class="bg-gradient-to-br from-[#f0faff] to-[#dfefff] text-gray-800 py-16"
-    >
-      <!-- Papan Pengumuman -->
-      <div class="w-full flex justify-center mt-10">
-        <div
-          class="bg-white border border-blue-200 rounded-2xl px-6 py-6 max-w-3xl w-full text-center shadow-md"
-        >
-          <span
-            id="announcementText"
-            class="block text-blue-700 font-medium text-lg transition-opacity duration-500 ease-in-out"
-          >
-            📢 Ujian dimulai hari Senin, jangan lupa belajar ya!
-          </span>
+    <section <!-- Papan Pengumuman naik ke atas tapi ada spasi -->
+      <section>
+        <style>
+          .rgb-frame {
+            position: relative;
+            border-radius: 1rem; /* Sama dengan rounded-2xl */
+            padding: 0.25rem; /* Spacer tipis untuk RGB border */
+            background: linear-gradient(
+              90deg,
+              red,
+              orange,
+              yellow,
+              green,
+              cyan,
+              blue,
+              violet,
+              red
+            );
+            background-size: 400% 400%;
+            animation: rgbRun 10s linear infinite;
+          }
+
+          .rgb-inner {
+            border-radius: 0.875rem; /* agar tidak menabrak border luar */
+            background-color: white;
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+          }
+
+          @keyframes rgbRun {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 100% 50%;
+            }
+          }
+        </style>
+
+        <div class="w-full flex justify-center mt-8 mb-8 z-10 relative">
+          <div class="rgb-frame max-w-3xl w-full">
+            <div class="rgb-inner">
+              <!-- Judul -->
+              <h2 class="text-2xl font-bold text-blue-700 mb-3 text-center">
+                Papan Pengumuman
+              </h2>
+
+              <!-- Teks pengumuman -->
+              <div
+                class="text-center text-blue-700 text-lg font-medium min-h-[2.5rem] transition-opacity duration-500 ease-in-out"
+              >
+                <span id="announcementText">📢 Bayar Kas!!</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <style>
-        #announcementText {
-          opacity: 1;
-        }
-      </style>
+        <script>
+          const texts = [
+            "📢 Bayar Kas!!",
+            "📢 Jangan Lupa Besok Sekolah!",
+            "📢 Besok Tugas Sholat Dzuhur",
+          ];
+          let i = 0;
+          const textSpan = document.getElementById("announcementText");
 
-      <script>
-        const texts = [
-          "📢 Ujian dimulai hari Senin, jangan lupa belajar ya!",
-          "📌 Bawa perlengkapan lengkap saat praktik hari Kamis!",
-          "🎉 Acara perpisahan akan diadakan bulan depan!",
-          "📷 Jangan lupa foto kelas hari Jumat, pakai seragam lengkap!",
-        ];
-
-        let i = 0;
-        const textSpan = document.getElementById("announcementText");
-
-        setInterval(() => {
-          textSpan.style.opacity = 0;
-          setTimeout(() => {
-            i = (i + 1) % texts.length;
-            textSpan.textContent = texts[i];
-            textSpan.style.opacity = 1;
-          }, 500);
-        }, 5000);
-      </script>
+          setInterval(() => {
+            textSpan.style.opacity = 0;
+            setTimeout(() => {
+              i = (i + 1) % texts.length;
+              textSpan.textContent = texts[i];
+              textSpan.style.opacity = 1;
+            }, 500);
+          }, 5000);
+        </script>
+      </section>
 
       <!DOCTYPE html>
       <html lang="id">
@@ -1003,7 +1036,7 @@
               </div>
             </div>
             <div class="my-7 text-black text-xs font-mono text-center">
-              &copy; 2025 Kelas IX G | Aris Triyanto, S.Pd., M.Hum.
+              &copy; 2025 Kelas IX G| Aris Triyanto, S.Pd., M.Hum.
             </div>
           </div>
         </body>
